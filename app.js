@@ -27,9 +27,9 @@ Cylon.robot({
         var photoVal = 0;
 
         every((1).second(), function() {
-            // photoVal = my.sensor.analogRead();
-            // console.log('Photo cell value is ');
-            console.log("Hello, human!");
+            photoVal = my.sensor.analogRead();
+            console.log('Photo cell value is ' + photoVal);
+            my.led.toggle;
         });
     }
 }).start();

@@ -1,0 +1,34 @@
+{
+  "name": "inner-sun",
+  "version": "1.0.0",
+  "description": "A Philips Hue Light automation system informed by natural daylight ",
+  "main": "app.js",
+  "dependencies": {
+    "cylon": "^1.2.0",
+    "cylon-firmata": "^0.23.0",
+    "cylon-gpio": "^0.27.0",
+    "cylon-hue": "^0.7.0",
+    "cylon-i2c": "^0.23.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichaelHazani/inner-sun.git"
+  },
+  "keywords": [
+    "node",
+    "hue",
+    "light",
+    "arduino",
+    "photocel"
+  ],
+  "author": "Michael Hazani",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MichaelHazani/inner-sun/issues"
+  },
+  "homepage": "https://github.com/MichaelHazani/inner-sun#readme"
+}

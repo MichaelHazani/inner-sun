@@ -1,5 +1,9 @@
 var Cylon = require('cylon');
 
+var LAPTOP_PORT = '/dev/tty.usbmodem1411'
+var MINI_LEFT_PORT = '/dev/tty.usbmodem1a12241';
+var MINI_RIGHT_PORT = '/dev/cu.usbmodem1a12231';
+
 //helpers
 var displayResult = function(result) {
     console.log(JSON.stringify(result, null, 2));
@@ -18,7 +22,7 @@ Cylon.robot({
     connections: {
         arduino: {
             adaptor: 'firmata',
-            port: '/dev/tty.usbmodem1a12241',
+            port: LAPTOP_PORT,
             devices: {
                 led: {
                     driver: 'led',
@@ -49,7 +53,7 @@ Cylon.robot({
     work: function(my) {
         var photoVal = 0;
         var briVal = 0;
-        every((5).second(), function() {
+        every((3).second(), function() {
 
             photoVal = my.sensor.analogRead();
             briVal = mappedVal(photoVal);
